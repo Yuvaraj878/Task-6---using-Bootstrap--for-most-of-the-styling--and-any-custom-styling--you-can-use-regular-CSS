@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Car Info</title>
+</head>
+<body>
+    <div id="car-info"></div> 
+
+    <script>
+        class Car {
+            constructor(Numberplate, Company) {
+                this.Numberplate = Numberplate;
+                this.Company = Company;
+            }
+            tech() {
+                return `Company name: ${this.Company}, Number plate of the car: ${this.Numberplate}`;
+            }
+        }
+
+        function displayCarInfo(car) {
+            const carInfoDiv = document.getElementById('car-info'); 
+            
+           
+            const p = document.createElement('p');
+            p.textContent = car.tech();
+
+            carInfoDiv.appendChild(p);
+        }
+
+        const car1 = new Car("BM1232", "BMW");
+        const car2 = new Car("AU3432", "AUDI");
+
+        displayCarInfo(car1);
+        displayCarInfo(car2);
+    </script>
+</body>
+</html>

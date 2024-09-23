@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGODESIGN - Creative Design Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #6f42c1;
+        }
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #6f42c1;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.alphacoders.com/125/1250621.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .btn-primary {
+            background-color: #6f42c1;
+            border-color: #6f42c1;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #5a32a3;
+            border-color: #5a32a3;
+            transform: translateY(-2px);
+        }
+        .btn-outline-light {
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-light:hover {
+            background-color: white;
+            color: #6f42c1;
+            transform: translateY(-2px);
+        }
+        .about, .projects, .services, .team, .contact {
+            padding: 6rem 0;
+        }
+        .about {
+            background-color: #f8f9fa;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #6f42c1;
+        }
+        .progress {
+            height: 25px;
+            border-radius: 15px;
+            background-color: #e9ecef;
+        }
+        .progress-bar {
+            border-radius: 15px;
+        }
+        .stats {
+            background-color: #6f42c1;
+            color: white;
+            padding: 4rem 0;
+        }
+        .stats h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        .stats p {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .testimonials {
+            background-color: #f8f9fa;
+            padding: 6rem 0;
+        }
+        .testimonial-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .testimonial-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: #6f42c1;
+            margin-bottom: 1rem;
+        }
+        .blog {
+            background-color: #f8f9fa;
+            padding: 6rem 0;
+        }
+        .blog-post {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-post-content {
+            padding: 1.5rem;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 5px solid #6f42c1;
+            transition: all 0.3s ease;
+        }
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+        .social-icons a {
+            color: #6f42c1;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #5a32a3;
+            transform: translateY(-2px);
+        }
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 4rem 0;
+        }
+        footer a {
+            color: #adb5bd;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LOGODESIGN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Innovative. Creative. Pixel Perfect.</h1>
+            <p>We bring your brand to life with stunning logos and captivating designs.</p>
+            <a href="#projects" class="btn btn-primary btn-lg mt-3">View Our Work</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg mt-3 ms-2">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="text-center mb-5">About Us</h2>
+            <p class="text-center mb-5">At LOGODESIGN, we're passionate about creating visual identities that leave a lasting impression. Our team of expert designers combines creativity with strategic thinking to deliver logos and branding solutions that truly represent your business.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>90%</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%"></div>
+                    </div>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>95%</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 95%"></div>
+                    </div>
+                    <p>Project Completion</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>85%</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%"></div>
+                    </div>
+                    <p>Repeat Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Portfolio</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="img\2.webp" alt="Project 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="img\3.jpg" alt="Project 2" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="img\4.png" alt="Project 3" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h2>250+</h2>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>100+</h2>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>15</h2>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="text-center mb-5">Client Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-item text-center">
+                        <img src="img\11.jpeg" alt="Testimonial 1" class="rounded-circle mb-3">
+                        <p>"LOGODESIGN exceeded our expectations. Their creativity and attention to detail resulted in a logo that perfectly captures our brand essence."</p>
+                        <h5>John Doe</h5>
+                        <p class="text-muted">CEO, Tech Innovators</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-item text-center">
+                        <img src="img\10.png" alt="Testimonial 2" class="rounded-circle mb-3">
+                        <p>"Working with LOGODESIGN was a pleasure. They listened to our needs and delivered a stunning brand identity that sets us apart from competitors."</p>
+                        <h5>Sarah Johnson</h5>
+                        <p class="text-muted">Marketing Director, Eco Solutions</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-item text-center">
+                        <img src="img\12.jpeg" alt="Testimonial 3" class="rounded-circle mb-3">
+                        <p>"The team at LOGODESIGN is incredibly talented. They took our vague ideas and transformed them into a cohesive and powerful visual identity."</p>
+                        <h5>Michael Chen</h5>
+                        <p class="text-muted">Founder, Startup Ventures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">🎨</div>
+                    <h4>Logo Design</h4>
+                    <p>We create unique, memorable logos that capture the essence of your brand and make a lasting impression on your audience.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">💼</div>
+                    <h4>Brand Identity</h4>
+                    <p>From color palettes to typography, we develop comprehensive brand identities that convey your company's values and personality.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                    <div class="service-icon">📱</div>
+                    <h4>Digital Design</h4>
+                    <p>We design stunning websites, mobile apps, and digital assets that enhance your brand's online presence and user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="text-center mb-5">Latest Insights</h2>
+            <p class="text-center mb-5">Stay updated with the latest trends in logo design and branding through our insightful articles.</p>
+            <div class="text-center mb-5">
+                <a href="#" class="btn btn-primary btn-lg">View All Articles</a>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="blog-post">
+                        <img src="img\6.jpg" alt="Blog post 1" class="img-fluid">
+                        <div class="blog-post-content">
+                            <h4>Top Logo Design Trends for 2024</h4>
+                            <p>Explore the latest trends shaping the world of logo design and how they can influence your brand's visual identity.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="blog-post">
+                        <img src="img\7.jpeg" alt="Blog post 2" class="img-fluid">
+                        <div class="blog-post-content">
+                            <h4>The Psychology of Color in Branding</h4>
+                            <p>Discover how different colors can evoke emotions and influence consumer behavior in brand design.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="blog-post">
+                        <img src="img\8.jpg" alt="Blog post 3" class="img-fluid">
+                        <div class="blog-post-content">
+                            <h4>When and How to Redesign Your Logo</h4>
+                            <p>Learn the key indicators that it's time for a logo refresh and best practices for a successful redesign.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="text-center mb-5">Meet Our Creative Team</h2>
+            <p class="text-center mb-5">Our talented designers are passionate about creating exceptional visual identities for our clients.</p>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="img\10.png" alt="Emma Watson">
+                    <h4>Emma Watson</h4>
+                    <p class="text-muted">Creative Director</p>
+                    <p>With over 15 years of experience, Emma leads our creative vision and ensures every project exceeds expectations.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="img\11.jpeg" alt="Alex Chen">
+                    <h4>Alex Chen</h4>
+                    <p class="text-muted">Senior Designer</p>
+                    <p>Alex specializes in creating minimalist yet impactful logos that stand the test of time.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="img\9.png" alt="Sophie Müller">
+                    <h4>Sophie Müller</h4>
+                    <p class="text-muted">Brand Strategist</p>
+                    <p>Sophie combines market insights with creative thinking to develop strong brand identities that resonate with target audiences.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5>Our Office</h5>
+                    <p>123 Creative Street<br>Design District, New York, NY 10001</p>
+                    <h5>Contact Information</h5>
+                    <p>Email: info@logodesign.com<br>Phone: (555) 123-4567</p>
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>LOGODESIGN</h5>
+                    <p>Crafting memorable brand identities through innovative logo design and creative solutions.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>QUICK LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>NEWSLETTER</h5>
+                    <p>Subscribe to our newsletter for the latest design trends and company updates.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 LOGODESIGN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>
